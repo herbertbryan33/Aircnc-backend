@@ -9,7 +9,7 @@ const app = express();
 const db_username = process.env.DB_USER;
 const db_password = process.env.DB_PASS;
 const db_name = process.env.DB_NAME
-const URL = 'mongodb+srv://' + db_username + ':' + db_password + '@aircnc.sgzsg.mongodb.net/' + db_name + '?retryWrites=true&w=majority';
+const URL = `mongodb+srv://${db_username}:${db_password}@aircnc.sgzsg.mongodb.net/${db_name}?retryWrites=true&w=majority`;
 
 mongoose.connect(URL, {useNewUrlParser: true,useUnifiedTopology: true,})
 	.then(console.log("Conectado ao banco de dados."))
